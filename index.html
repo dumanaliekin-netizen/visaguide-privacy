@@ -158,7 +158,7 @@
 
 <main>
   <div class="card">
-    <span class="last-updated">Last updated: June 2, 2026</span>
+    <span class="last-updated">Last updated: June 4, 2026</span>
 
     <p class="intro">
       VisaGuide ("we", "us", or "our") is committed to protecting your privacy.
@@ -173,6 +173,7 @@
       <li><strong>Document Images:</strong> Photos and scans of visa-related documents (passports, financial statements, etc.) that you voluntarily upload for AI-assisted verification.</li>
       <li><strong>Interview Practice Data:</strong> Text answers you type during visa interview practice sessions, along with application context details you have previously entered (such as purpose of visit, intended stay duration, and employer information), used to generate AI coaching feedback.</li>
       <li><strong>Application Data:</strong> Visa application details you enter, including visa type, target country, intended stay duration, and appointment dates, stored to power your checklists and reminders.</li>
+      <li><strong>AI Consent Record:</strong> When you give explicit consent for AI document processing, we store a record of your consent including the consent date and version of the consent text. You can review or revoke this at any time from Profile &gt; Data &amp; Privacy.</li>
       <li><strong>Usage Data:</strong> Information about how you interact with the app, including features accessed and actions taken, collected automatically to improve the service.</li>
       <li><strong>Device Information:</strong> Device type, operating system version, and app version for technical support and compatibility purposes.</li>
     </ul>
@@ -194,9 +195,14 @@
     <p>VisaGuide uses Anthropic's Claude AI for two features:</p>
 
     <div class="highlight-box">
-      <strong>Document Verification:</strong> When you request AI verification of a document,
-      the image you upload is transmitted to Anthropic's Claude API via a secure Firebase
-      Cloud Function for analysis. The result is returned to you and saved to your account in Firestore.
+      <strong>Document Verification:</strong> Before your document image is processed by AI,
+      we ask for your explicit consent as required by KVKK and applicable data protection law.
+      Your consent is recorded with a timestamp in your account. When you request AI verification,
+      the image is transmitted to Anthropic's Claude API via a secure Firebase Cloud Function.
+      <strong>Your document image is permanently deleted from our servers immediately after AI
+      analysis is complete</strong> — only the verification result (pass/fail, confidence score,
+      issues list) is retained. You can revoke this consent at any time from
+      Profile &gt; Data &amp; Privacy.
     </div>
 
     <div class="highlight-box">
@@ -248,9 +254,14 @@
 
     <h2>6. Data Retention</h2>
     <p>
-      We retain your personal data for as long as your account is active or as needed to provide
-      our services. You may delete your account and all associated data at any time through the
-      Profile &gt; Danger Zone section of the app. Upon account deletion, your data is permanently
+      <strong>Document images</strong> uploaded for AI verification are deleted from our servers
+      immediately after processing is complete — they are never stored beyond the moment needed
+      for analysis.
+    </p>
+    <p>
+      All other personal data is retained for as long as your account is active or as needed to
+      provide our services. You may delete your account and all associated data at any time through
+      the Profile &gt; Danger Zone section of the app. Upon account deletion, your data is permanently
       removed from our systems within 30 days, except where retention is required by law.
     </p>
 
@@ -270,6 +281,7 @@
       <li><strong>Deletion:</strong> Delete all your data or your entire account directly within the app, or by contacting us.</li>
       <li><strong>Portability:</strong> Request your data in a portable format.</li>
       <li><strong>Objection:</strong> Object to certain types of processing.</li>
+      <li><strong>Revoke AI Consent:</strong> Withdraw your consent for AI document processing at any time from Profile &gt; Data &amp; Privacy. Revoking consent disables the AI verification feature until you re-consent.</li>
     </ul>
     <p>To exercise these rights, use the in-app account management features or contact us at the address below.</p>
 
@@ -287,7 +299,25 @@
       that such transfers comply with applicable data protection laws through appropriate safeguards.
     </p>
 
-    <h2>11. Changes to This Policy</h2>
+    <h2>11. KVKK — Turkish Data Protection</h2>
+    <p>
+      For users in Turkey, VisaGuide complies with the <strong>Kişisel Verilerin Korunması
+      Kanunu (KVKK — Law No. 6698 on the Protection of Personal Data)</strong>.
+    </p>
+    <p><strong>Legal basis for processing your personal data under KVKK:</strong></p>
+    <ul>
+      <li><strong>Account data</strong> (email, name): Necessary for performance of the service contract.</li>
+      <li><strong>Document images for AI verification:</strong> Based on your explicit consent, obtained through the in-app consent screen before the feature is first used.</li>
+      <li><strong>Application data and usage data:</strong> Legitimate interest in providing and improving the service.</li>
+    </ul>
+    <p><strong>Data controller:</strong> VisaGuide (<a href="mailto:privacy@visaguide.app">privacy@visaguide.app</a>)</p>
+    <p>
+      You may exercise your rights under KVKK Article 11 — including the right to learn whether
+      your data is processed, request correction or deletion, and object to processing — by
+      contacting us at <a href="mailto:privacy@visaguide.app">privacy@visaguide.app</a>.
+    </p>
+
+    <h2>12. Changes to This Policy</h2>
     <p>
       We may update this Privacy Policy from time to time. We will notify you of any material
       changes by updating the "Last updated" date at the top of this page and, where required
@@ -295,7 +325,7 @@
       use of the app after any changes constitutes your acceptance of the updated policy.
     </p>
 
-    <h2>12. Contact Us</h2>
+    <h2>13. Contact Us</h2>
     <p>
       If you have any questions, concerns, or requests regarding this Privacy Policy or your
       personal data, please contact us at:
