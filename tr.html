@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisaGuide – Gizlilik Politikası</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a2e;
+      background: #f8f9fc;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a56db 0%, #1035a0 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: #fff;
+      border-radius: 16px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a56db;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .lang-switcher a {
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: all 0.15s;
+    }
+
+    .lang-switcher a.active,
+    .lang-switcher a:hover {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 36px 40px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+
+    .last-updated {
+      display: inline-block;
+      background: #eef2ff;
+      color: #1a56db;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      color: #444;
+      margin-bottom: 32px;
+      font-size: 15px;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 32px 0 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eef2ff;
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p {
+      color: #444;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    ul li {
+      color: #444;
+      font-size: 15px;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '•';
+      position: absolute;
+      left: 4px;
+      color: #1a56db;
+      font-weight: 700;
+    }
+
+    a {
+      color: #1a56db;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: #f0f4ff;
+      border-left: 4px solid #1a56db;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 24px 20px; }
+      header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">VG</div>
+  <h1>VisaGuide</h1>
+  <p>Gizlilik Politikası</p>
+  <div class="lang-switcher">
+    <a href="index.html">English</a>
+    <a href="tr.html" class="active">Türkçe</a>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <span class="last-updated">Son güncelleme: 21 Haziran 2026 (revize)</span>
+
+    <p class="intro">
+      VisaGuide ("biz", "bize" veya "bizim") gizliliğinizi korumaya kararlıdır.
+      Bu Gizlilik Politikası, mobil uygulamamızı kullandığınızda bilgilerinizi
+      nasıl topladığımızı, kullandığımızı, ifşa ettiğimizi ve koruduğumuzu açıklamaktadır.
+    </p>
+
+    <h2>1. Topladığımız Bilgiler</h2>
+    <p>Aşağıdaki bilgi kategorilerini topluyoruz:</p>
+    <ul>
+      <li><strong>Hesap Bilgileri:</strong> Hesap oluşturduğunuzda e-posta adresiniz.</li>
+      <li><strong>Başvurucu Profili:</strong> Kişiselleştirilmiş bir belge listesi oluşturmak için sağladığınız bilgiler — çalışma durumu, sektör, eğitim düzeyi, medeni hal, mülk sahipliği, finansman kaynağı, önceki seyahat geçmişi, planlanan seyahat şekli ve resmi davetiye olup olmadığı. Bu veriler hesabınızda güvenli şekilde saklanır ve hesabınızı sildiğinizde <strong>kalıcı olarak silinir</strong>.</li>
+      <li><strong>Belge Görselleri:</strong> AI destekli doğrulama için yüklediğiniz pasaport, finansal belge gibi vize belgelerinin fotoğrafları güvenli işleme sunucumuza iletilir, analiz edilir ve analiz tamamlandıktan hemen sonra <strong>kalıcı olarak silinir</strong>. Belge görselleri asla veritabanımızda saklanmaz — yalnızca doğrulama sonucu (geçti/kaldı, güven skoru, sorunlar listesi) tutulur.</li>
+      <li><strong>Mülakat Pratik Verileri:</strong> Vize mülakatı pratik oturumlarında yazdığınız metin yanıtları ve daha önce girdiğiniz başvuru bağlamı bilgileri (ziyaret amacı, planlanan kalış süresi, işveren bilgisi gibi), AI koçluk geri bildirimi oluşturmak için kullanılır.</li>
+      <li><strong>Motivasyon Mektubu Bilgileri:</strong> AI Motivasyon Mektubu özelliğini kullandığınızda ziyaret amacı, meslek durumu, işveren veya okul adı, ev ülkenizle bağlarınız, finansman kaynağı, konaklama ve seyahat tarihleri bilgilerini sağlarsınız. Bu veriler mektubunuzu oluşturmak için güvenli işleme sunucumuza iletilir ve daha sonra erişebilmeniz için hesabınızda saklanır.</li>
+      <li><strong>Schengen Başvuru Formu Verileri:</strong> Schengen Form Sihirbazı'nı kullandığınızda kişisel bilgiler (ad, doğum tarihi, uyruk, kimlik numarası), seyahat belgesi bilgileri, iletişim ve ikamet bilgileri, meslek, seyahat planı, önceki vize geçmişi ve masraf karşılama bilgilerini girersiniz. Bu veriler yalnızca cihazınızda PDF oluşturmak için kullanılır ve formu temizleyene veya hesabınızı silene kadar yerel olarak saklanır.</li>
+      <li><strong>Başvuru Verileri:</strong> Girdiğiniz vize başvurusu bilgileri — vize türü, hedef ülke, planlanan kalış süresi ve randevu tarihleri — kontrol listelerinizi desteklemek ve hatırlatıcılar göndermek için saklanır.</li>
+      <li><strong>AI Onay Kaydı:</strong> AI belge işleme için açık onay verdiğinizde, onay tarihi ve onay metni sürümü dahil olmak üzere onay kaydınız saklanır. Bunu istediğiniz zaman Profil &gt; Veri ve Gizlilik bölümünden inceleyebilir veya geri alabilirsiniz.</li>
+      <li><strong>Kullanım Verileri:</strong> Hizmet iyileştirme amacıyla otomatik olarak toplanan, erişilen özellikler ve gerçekleştirilen işlemler dahil uygulamayla nasıl etkileşime girdiğinize dair bilgiler.</li>
+      <li><strong>Cihaz Bilgileri:</strong> Teknik destek ve uyumluluk amaçları için cihaz türü, işletim sistemi sürümü ve uygulama sürümü.</li>
+    </ul>
+
+    <h2>2. Bilgilerinizi Nasıl Kullanıyoruz</h2>
+    <p>Topladığımız bilgileri şunlar için kullanıyoruz:</p>
+    <ul>
+      <li>Hesabınızı oluşturmak ve yönetmek.</li>
+      <li>Başvurucu profilinize dayalı kişiselleştirilmiş belge listesi oluşturmak.</li>
+      <li>AI destekli belge doğrulama hizmetleri sunmak.</li>
+      <li>AI destekli vize mülakatı pratik koçluğu ve geri bildirimi sunmak.</li>
+      <li>Vize başvuruları için AI tarafından yazılmış motivasyon mektupları oluşturmak.</li>
+      <li>Vize sorularınız için AI sohbet asistanı sunmak.</li>
+      <li>Schengen vize başvuru formu PDF'leri oluşturmak.</li>
+      <li>Vize başvuru kontrol listelerinizi göstermek ve ilerlemenizi takip etmek.</li>
+      <li>Randevu hatırlatıcıları ve belge son tarih uyarıları planlamak.</li>
+      <li>Uygulama deneyimini geliştirmek ve kişiselleştirmek.</li>
+      <li>Taleplerinize yanıt vermek ve müşteri desteği sağlamak.</li>
+      <li>Geçerli yasal yükümlülüklere uymak.</li>
+    </ul>
+
+    <h2>3. AI Destekli Özellikler</h2>
+    <p>VisaGuide aşağıdaki özellikler için Anthropic'in Claude AI'ını kullanmaktadır:</p>
+
+    <div class="highlight-box">
+      <strong>Belge Doğrulama:</strong> Belge görseliniz AI tarafından işlenmeden önce açık
+      onayınızı istiyoruz (KVKK ve geçerli veri koruma mevzuatı gereği). Onayınız hesabınıza
+      zaman damgasıyla kaydedilir. AI doğrulama talep ettiğinizde yüklediğiniz görsel, güvenli
+      bir Firebase Cloud Function aracılığıyla Anthropic'in Claude API'sine iletilir.
+      <strong>Belge görseliniz AI analizi tamamlandıktan hemen sonra sunucularımızdan kalıcı
+      olarak silinir</strong> — yalnızca doğrulama sonucu (geçti/kaldı, güven skoru, sorunlar
+      listesi) tutulur. Bu onayı istediğiniz zaman Profil &gt; Veri ve Gizlilik bölümünden
+      geri alabilirsiniz.
+    </div>
+
+    <div class="highlight-box">
+      <strong>Mülakat Pratik Koçluğu:</strong> Mülakat Hazırlığı özelliğinde pratik yanıt
+      gönderdiğinizde, yazdığınız yanıt metni ve ilgili başvuru bağlamı (vize türü, ziyaret
+      amacı, planlanan kalış, işveren adı ve hedef ülkede ailenizin olup olmadığı), güvenli
+      bir Firebase Cloud Function aracılığıyla Anthropic'in Claude API'sine iletilir. AI,
+      skor, riskli ifadeler, geliştirme önerileri ve model yanıt içeren bir koçluk sonucu
+      döndürür; bu sonuç hesabınıza kaydedilir. Her kullanıcı günde 20 AI koçluk kontrolüyle
+      sınırlıdır.
+    </div>
+
+    <div class="highlight-box">
+      <strong>Motivasyon Mektubu Oluşturma:</strong> Motivasyon Mektubu özelliğini
+      kullandığınızda girdiğiniz bilgiler (ziyaret amacı, meslek, işveren veya okul adı, ev
+      ülkenizle bağlarınız, finansman kaynağı, konaklama ve seyahat tarihleri), güvenli bir
+      Firebase Cloud Function aracılığıyla Anthropic'in Claude API'sine iletilir ve İngilizce
+      kişiselleştirilmiş bir vize niyet mektubu oluşturulur. Oluşturulan mektup ve girdiğiniz
+      form verileri hesabınıza kaydedilir. Her kullanıcı günde 5 motivasyon mektubu
+      oluşturmayla sınırlıdır.
+    </div>
+
+    <div class="highlight-box">
+      <strong>AI Sohbet Asistanı:</strong> Uygulama içi sohbet asistanı, vize ile ilgili
+      sorular sormanıza olanak tanır. Gönderdiğiniz her mesaj, bağlam için önceki sohbet
+      geçmişinizle birlikte güvenli bir Firebase Cloud Function aracılığıyla Anthropic'in
+      Claude API'sine iletilir. Sohbet geçmişi hesabınızda saklanır. Her kullanıcı günde
+      20 AI sohbet mesajıyla sınırlıdır.
+    </div>
+
+    <p>
+      Tüm durumlarda Anthropic, iletilen verileri yalnızca bir sonuç döndürmek için işler
+      ve verilerinizi kendi gizlilik politikasında belirtilenlerin ötesinde kendi eğitim
+      amaçları için saklamaz. Ayrıntılar için lütfen
+      <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">https://www.anthropic.com/privacy</a>
+      adresindeki Anthropic Gizlilik Politikasını inceleyin.
+    </p>
+
+    <h2>4. Yerel Bildirimler</h2>
+    <p>Hatırlatıcıları etkinleştirirseniz VisaGuide, cihazınızdaki yerel bildirimleri şunlar için kullanır:</p>
+    <ul>
+      <li>Uygulamaya girdiğiniz pasaport son kullanma tarihlerine yaklaşan uyarılar (son kullanma tarihinden 6 ay, 3 ay ve 1 ay önce).</li>
+      <li>Aktif vize başvurularınızdaki eksik belgeler.</li>
+      <li>Yaklaşan vize randevu tarihleri.</li>
+    </ul>
+    <p>
+      Tüm bildirim planlaması cihazınızda yerel olarak gerçekleştirilir. Pasaport son kullanma
+      tarihiniz yalnızca cihazınızda saklanır ve sunucularımıza hiçbir zaman iletilmez.
+      Hatırlatıcıları istediğiniz zaman Profil &gt; Bildirimler'den veya cihazınızın
+      Ayarlar &gt; Bildirimler bölümünden devre dışı bırakabilirsiniz.
+    </p>
+
+    <h2>5. Üçüncü Taraf Hizmetler</h2>
+    <p>Her biri kendi gizlilik politikalarına tabi olan aşağıdaki üçüncü taraf hizmetleri kullanıyoruz:</p>
+    <ul>
+      <li>
+        <strong>Firebase (Google LLC)</strong> — Kimlik doğrulama, veritabanı depolama (Firestore)
+        ve dosya depolama (Cloud Storage).<br/>
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a>
+      </li>
+      <li>
+        <strong>Anthropic PBC</strong> — Claude API aracılığıyla AI analizi ve koçluk.<br/>
+        <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">https://www.anthropic.com/privacy</a>
+      </li>
+    </ul>
+    <p>Kişisel bilgilerinizi üçüncü taraflara satmıyor, takas etmiyor veya kiraya vermiyoruz.</p>
+
+    <h2>6. Veri Saklama</h2>
+    <p>
+      <strong>Belge görselleri</strong> işleme tamamlandıktan hemen sonra sunucularımızdan
+      silinir — analiz için gerekli olan an ötesinde hiçbir zaman saklanmaz.
+    </p>
+    <p>
+      <strong>Başvurucu profiliniz</strong> (çalışma durumu, medeni hal, finansman kaynağı
+      ve ilgili alanlar) kişiselleştirilmiş belge listenizi oluşturmak için saklanır.
+      Hesabınızı sildiğinizde bu bilgiler kalıcı olarak silinir.
+    </p>
+    <p>
+      Diğer tüm kişisel veriler, hesabınız aktif olduğu sürece veya hizmetlerimizi sağlamak
+      için gerektiği kadar tutulur. Uygulamanın Profil &gt; Tehlikeli Bölge bölümünden
+      istediğiniz zaman hesabınızı ve ilişkili tüm verilerinizi silebilirsiniz. Hesap
+      silinmesinin ardından verileriniz, kanunun gerektirdiği durumlar dışında 30 gün
+      içinde sistemlerimizden kalıcı olarak kaldırılır.
+    </p>
+
+    <h2>7. Veri Güvenliği</h2>
+    <p>
+      Şifrelenmiş veri iletimi (HTTPS/TLS), veri erişimini yalnızca hesap sahibiyle
+      sınırlandıran Firebase Güvenlik Kuralları ve güvenli bulut altyapısı dahil olmak
+      üzere bilgilerinizi korumak için endüstri standardı güvenlik önlemleri uyguluyoruz.
+      Ancak internet üzerinden iletim veya elektronik depolama yöntemlerinin %100 güvenli
+      olmadığını belirtmek isteriz.
+    </p>
+
+    <h2>8. Haklarınız ve Seçimleriniz</h2>
+    <p>Konumunuza bağlı olarak kişisel verileriniz konusunda aşağıdaki haklara sahip olabilirsiniz:</p>
+    <ul>
+      <li><strong>Erişim:</strong> Hakkınızda tuttuğumuz kişisel verilerin bir kopyasını talep etme.</li>
+      <li><strong>Düzeltme:</strong> Hatalı veya eksik verileri düzeltmemizi talep etme.</li>
+      <li><strong>Silme:</strong> Tüm verilerinizi veya hesabınızı doğrudan uygulama içinde veya bizimle iletişime geçerek silme.</li>
+      <li><strong>Taşınabilirlik:</strong> Verilerinizi taşınabilir bir formatta talep etme.</li>
+      <li><strong>İtiraz:</strong> Belirli işlem türlerine itiraz etme.</li>
+      <li><strong>AI Onayını Geri Alma:</strong> AI belge işleme onayınızı istediğiniz zaman Profil &gt; Veri ve Gizlilik bölümünden geri alma. Onayı geri almak, yeniden onay verene kadar AI doğrulama özelliğini devre dışı bırakır.</li>
+    </ul>
+    <p>Bu hakları kullanmak için uygulama içi hesap yönetimi özelliklerini kullanın veya aşağıdaki adresten bizimle iletişime geçin.</p>
+
+    <h2>9. Çocukların Gizliliği</h2>
+    <p>
+      VisaGuide, 13 yaşın altındaki çocuklara (Avrupa Ekonomik Alanı'nda 16 yaşın
+      altındakilere) yönelik değildir. Çocuklardan bilerek kişisel bilgi toplamıyoruz.
+      Yanlışlıkla bu tür bilgileri topladığımıza inanıyorsanız, silebilmemiz için lütfen
+      derhal bizimle iletişime geçin.
+    </p>
+
+    <h2>10. Uluslararası Veri Transferleri</h2>
+    <p>
+      Bilgileriniz, hizmet sağlayıcılarımızın faaliyet gösterdiği Amerika Birleşik Devletleri
+      dahil olmak üzere ikamet ettiğiniz ülke dışındaki ülkelere aktarılabilir ve orada
+      işlenebilir. Bu tür transferlerin uygun güvenceler aracılığıyla geçerli veri koruma
+      yasalarına uygun olmasını sağlıyoruz.
+    </p>
+
+    <h2>11. KVKK — Kişisel Verilerin Korunması</h2>
+    <p>
+      Türkiye'deki kullanıcılar için VisaGuide, <strong>Kişisel Verilerin Korunması
+      Kanunu'na (KVKK — 6698 Sayılı Kanun)</strong> uymaktadır.
+    </p>
+    <p><strong>KVKK kapsamında kişisel verilerinizin işlenmesinin hukuki dayanakları:</strong></p>
+    <ul>
+      <li><strong>Hesap verileri</strong> (e-posta, ad): Hizmet sözleşmesinin ifası için zorunludur.</li>
+      <li><strong>Başvurucu profil verileri</strong> (çalışma durumu, medeni hal, finansman kaynağı vb.): Hizmet ifası için zorunludur — yalnızca kişiselleştirilmiş belge listenizi oluşturmak için kullanılır. Hesap silinmesinde kalıcı olarak silinir.</li>
+      <li><strong>AI doğrulama için belge görselleri:</strong> Her özellik ilk kullanılmadan önce uygulama içi onay ekranı aracılığıyla alınan açık rızanıza dayanır.</li>
+      <li><strong>Motivasyon mektubu bilgileri</strong> (meslek, amaç, finansman kaynağı vb.): Özelliği başlatma şeklindeki açık eyleminize / rızanıza dayanır; yalnızca AI aracılığıyla mektubunuzu oluşturmak ve sonucu hesabınızda saklamak için kullanılır.</li>
+      <li><strong>Schengen form verileri:</strong> PDF oluşturma için cihazınızda yerel olarak işlenir; formu devam ettirmenize veya yeniden oluşturmanıza izin vermek amacıyla hesabınızda saklanır.</li>
+      <li><strong>Başvuru verileri ve kullanım verileri:</strong> Hizmeti sağlama ve geliştirme konusundaki meşru menfaat.</li>
+    </ul>
+    <p><strong>Veri sorumlusu:</strong> VisaGuide (<a href="mailto:privacy@visaguide.app">privacy@visaguide.app</a>)</p>
+    <p>
+      KVKK Madde 11 kapsamındaki haklarınızı — verilerinizin işlenip işlenmediğini öğrenme,
+      düzeltme veya silme talep etme ve işlemeye itiraz etme hakkı dahil —
+      <a href="mailto:privacy@visaguide.app">privacy@visaguide.app</a> adresinden
+      bizimle iletişime geçerek kullanabilirsiniz.
+    </p>
+
+    <h2>12. Bu Politikadaki Değişiklikler</h2>
+    <p>
+      Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler hakkında,
+      bu sayfanın üstündeki "Son güncelleme" tarihini güncelleyerek ve yasal olarak gerektiğinde
+      ek bildirim sağlayarak (uygulama içi bildirim gibi) sizi bilgilendireceğiz.
+      Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı
+      kabul ettiğiniz anlamına gelir.
+    </p>
+
+    <h2>13. Bize Ulaşın</h2>
+    <p>
+      Bu Gizlilik Politikası veya kişisel verilerinizle ilgili soru, endişe veya talepleriniz
+      için lütfen bize ulaşın:
+    </p>
+    <p><strong>E-posta:</strong> <a href="mailto:privacy@visaguide.app">privacy@visaguide.app</a></p>
+    <p>Talebinize 30 gün içinde yanıt vereceğiz.</p>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 VisaGuide. Tüm hakları saklıdır.
+</footer>
+
+</body>
+</html>

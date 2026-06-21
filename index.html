@@ -49,6 +49,30 @@
       opacity: 0.85;
     }
 
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .lang-switcher a {
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: all 0.15s;
+    }
+
+    .lang-switcher a.active,
+    .lang-switcher a:hover {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
     main {
       max-width: 760px;
       margin: 40px auto;
@@ -154,11 +178,15 @@
   <div class="logo">VG</div>
   <h1>VisaGuide</h1>
   <p>Privacy Policy</p>
+  <div class="lang-switcher">
+    <a href="index.html" class="active">English</a>
+    <a href="tr.html">Türkçe</a>
+  </div>
 </header>
 
 <main>
   <div class="card">
-    <span class="last-updated">Last updated: June 4, 2026 (revised)</span>
+    <span class="last-updated">Last updated: June 21, 2026 (revised)</span>
 
     <p class="intro">
       VisaGuide ("we", "us", or "our") is committed to protecting your privacy.
@@ -170,8 +198,11 @@
     <p>We collect the following categories of information:</p>
     <ul>
       <li><strong>Account Information:</strong> Your email address when you create an account.</li>
+      <li><strong>Applicant Profile:</strong> Information you provide about yourself to receive a personalised document checklist — specifically your employment status, job sector, education level, marital status, property ownership, financing source, previous travel history, planned travel method, and whether you have a formal invitation. This data is stored securely in your account and <strong>permanently deleted when you delete your account</strong>.</li>
       <li><strong>Document Images:</strong> Photos and scans of visa-related documents (passports, financial statements, etc.) that you upload for AI-assisted verification are transmitted to our secure processing server, analyzed, and <strong>permanently deleted immediately</strong> after analysis is complete. Document images are never stored in our database — only the verification result (pass/fail, confidence score, issues list) is retained.</li>
       <li><strong>Interview Practice Data:</strong> Text answers you type during visa interview practice sessions, along with application context details you have previously entered (such as purpose of visit, intended stay duration, and employer information), used to generate AI coaching feedback.</li>
+      <li><strong>Motivation Letter Details:</strong> When you use the AI Motivation Letter feature, you provide purpose of visit, occupation status, employer or school name, ties to your home country, financial source, and accommodation details. This data is transmitted to our secure processing server to generate your letter and is stored in your account so you can access and share the letter later.</li>
+      <li><strong>Schengen Application Form Data:</strong> When you use the Schengen Form Wizard, you enter personal details (name, date of birth, nationality, national ID number), travel document information, contact and residence details, occupation, travel itinerary, previous visa history, and cost coverage information. This data is used solely to generate a PDF document on your device and is stored locally until you clear the form or delete your account.</li>
       <li><strong>Application Data:</strong> Visa application details you enter, including visa type, target country, intended stay duration, and appointment dates, stored to power your checklists and reminders.</li>
       <li><strong>AI Consent Record:</strong> When you give explicit consent for AI document processing, we store a record of your consent including the consent date and version of the consent text. You can review or revoke this at any time from Profile &gt; Data &amp; Privacy.</li>
       <li><strong>Usage Data:</strong> Information about how you interact with the app, including features accessed and actions taken, collected automatically to improve the service.</li>
@@ -182,8 +213,12 @@
     <p>We use the information we collect to:</p>
     <ul>
       <li>Create and manage your account.</li>
+      <li>Generate a personalised document checklist based on your applicant profile.</li>
       <li>Provide AI-assisted document verification services.</li>
       <li>Provide AI-powered visa interview practice coaching and feedback.</li>
+      <li>Generate AI-written motivation letters for visa applications.</li>
+      <li>Provide an AI chat assistant for visa-related questions.</li>
+      <li>Pre-fill and generate Schengen visa application form PDFs.</li>
       <li>Display your visa application checklists and track progress.</li>
       <li>Schedule appointment reminders and document deadline alerts.</li>
       <li>Improve and personalise the application experience.</li>
@@ -192,7 +227,7 @@
     </ul>
 
     <h2>3. AI-Powered Features</h2>
-    <p>VisaGuide uses Anthropic's Claude AI for two features:</p>
+    <p>VisaGuide uses Anthropic's Claude AI for the following features:</p>
 
     <div class="highlight-box">
       <strong>Document Verification:</strong> Before your document image is processed by AI,
@@ -215,8 +250,25 @@
       20 AI coaching checks per day.
     </div>
 
+    <div class="highlight-box">
+      <strong>Motivation Letter Generation:</strong> When you use the Motivation Letter feature,
+      the details you enter (purpose of visit, occupation, employer or school name, ties to your
+      home country, financial source, accommodation, and travel dates) are transmitted to
+      Anthropic's Claude API via a secure Firebase Cloud Function to generate a personalised visa
+      intent letter in English. The generated letter and the form data you entered are stored in
+      your account so you can access, copy, or share them at any time. Each user is limited to
+      5 motivation letter generations per day.
+    </div>
+
+    <div class="highlight-box">
+      <strong>AI Chat Assistant:</strong> The in-app chat assistant allows you to ask visa-related
+      questions. Each message you send, along with your prior conversation history for context,
+      is transmitted to Anthropic's Claude API via a secure Firebase Cloud Function. Conversation
+      history is stored in your account. Each user is limited to 20 AI chat messages per day.
+    </div>
+
     <p>
-      In both cases, Anthropic processes the submitted data solely to return a result and does not
+      In all cases, Anthropic processes the submitted data solely to return a result and does not
       store your data for its own training purposes beyond what its own privacy policy specifies.
       Please review Anthropic's Privacy Policy at
       <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">https://www.anthropic.com/privacy</a>
@@ -246,7 +298,8 @@
         <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a>
       </li>
       <li>
-        <strong>Anthropic PBC</strong> — AI document analysis and interview coaching via the Claude API.<br/>
+        <strong>Anthropic PBC</strong> — AI document analysis, interview coaching, motivation
+        letter generation, and chat assistant via the Claude API.<br/>
         <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">https://www.anthropic.com/privacy</a>
       </li>
     </ul>
@@ -257,6 +310,11 @@
       <strong>Document images</strong> uploaded for AI verification are deleted from our servers
       immediately after processing is complete — they are never stored beyond the moment needed
       for analysis.
+    </p>
+    <p>
+      <strong>Your applicant profile</strong> (employment status, marital status, financing source,
+      and related fields) is stored to generate your personalised document checklist. When you
+      delete your account, this information is permanently deleted.
     </p>
     <p>
       All other personal data is retained for as long as your account is active or as needed to
@@ -307,7 +365,10 @@
     <p><strong>Legal basis for processing your personal data under KVKK:</strong></p>
     <ul>
       <li><strong>Account data</strong> (email, name): Necessary for performance of the service contract.</li>
+      <li><strong>Applicant profile data</strong> (employment status, marital status, financing source, etc.): Necessary for performance of the service — used solely to generate your personalised document checklist. Permanently deleted upon account deletion.</li>
       <li><strong>Document images for AI verification:</strong> Based on your explicit consent, obtained through the in-app consent screen before the feature is first used.</li>
+      <li><strong>Motivation letter details</strong> (occupation, purpose, financial source, etc.): Based on your explicit action of initiating the feature; used solely to generate your letter via AI and store the result in your account.</li>
+      <li><strong>Schengen form data:</strong> Processed locally on your device for PDF generation; stored in your account solely to allow you to resume or re-generate the form.</li>
       <li><strong>Application data and usage data:</strong> Legitimate interest in providing and improving the service.</li>
     </ul>
     <p><strong>Data controller:</strong> VisaGuide (<a href="mailto:privacy@visaguide.app">privacy@visaguide.app</a>)</p>
